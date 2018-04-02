@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "An uncomplicated bookstore application.",
   "main": "index.js",
+  "scripts": {
+      "dev": "yarn run dev:client & yarn run dev:server",
+      "dev:client": "webpack-cli --config config/client/dev.config.ts -w",
+      "dev:server": "webpack-cli --config config/server/dev.config.ts & nodemon dist/bundles/server.bundle.js"
+  },
   "repository": "https://github.com/gpfaucher/books.git",
   "author": "Gabriel Faucher <gpfaucher@gmail.com>",
   "license": "MIT",

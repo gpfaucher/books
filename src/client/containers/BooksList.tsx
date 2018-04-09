@@ -1,15 +1,13 @@
 import * as React from 'react';
 
-import BooksList from './BooksList';
-
-class App extends React.Component {
+class BooksList extends React.Component {
     public render() {
         return (
             <div>
-                <BooksList />
+                <h1>Hello React</h1>
             </div>
         );
     }
 }
 
-export default App;
+export default BooksList;

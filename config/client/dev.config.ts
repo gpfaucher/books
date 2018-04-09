@@ -18,6 +18,9 @@ const config = {
         filename: 'client.bundle.js',
         path: path.join(root, 'dist/bundles'),
     },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    },
 };
 
 export default config;

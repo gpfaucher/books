@@ -12,6 +12,18 @@ const config = {
                 test: /\.tsx/,
                 use: 'ts-loader',
             },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                        },
+                    },
+                ],
+            },
         ],
     },
     output: {
@@ -19,7 +31,7 @@ const config = {
         path: path.join(root, 'dist/bundles'),
     },
     resolve: {
-        extensions: ['.ts', '.tsx', '.js', '.jsx'],
+        extensions: ['.css', '.ts', '.tsx', '.js', '.jsx'],
     },
 };
 

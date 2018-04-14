@@ -1,8 +1,29 @@
 export const books = (
-    state = {books: []},
+    state = {
+        books: [
+        {
+            description: 'Shit you need to do and stuff',
+            id: 1,
+            price: 44,
+            title: '12 Rule for Life: An Antidote to Chaos',
+        },
+        {
+            description: 'Myths and stuff',
+            id: 2,
+            price: 59,
+            title: 'Maps of Meaning',
+        },
+    ],
+    },
     action,
 ) => {
     switch (action.type) {
+        case 'GET_BOOKS': {
+            return {
+                ...state,
+                books: [...state.books]
+            }
+        }
         case 'POST_BOOK': {
             return {
                 books: [
